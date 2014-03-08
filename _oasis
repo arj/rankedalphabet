@@ -1,0 +1,22 @@
+OASISFormat: 0.3
+Name:        rankedalphabet
+Version:     0.1
+Synopsis:    A value providing a (finite) ranked alphabet.
+Authors:     Robert Jakob <rj@robertjakob.de>
+License:     Apache-2
+Plugins:     META (0.3), StdFiles (0.3), DevFiles (0.3)
+
+Library rankedalphabet
+  Path:       lib
+  BuildTools: ocamlbuild
+  Modules:    RankedAlphabet
+  
+Executable rankedalphabettest
+  Path:       lib-test
+  BuildTools: ocamlbuild
+  BuildDepends: rankedalphabet
+  MainIs:     RankedAlphabetTest.ml
+  
+Test "RankedAlphabet"
+  Command: $rankedalphabettest
+  
